@@ -40,15 +40,20 @@ function handleKeyUp(event){
     }
 
     const filterText = event.target.value;
+    
    
     if(filterText.trim() !== ''){
-        filterProd(filterText);
+        filterProd(filterText.toLowerCase());
     }
 }
 
 function filterProd(filterText){
     const filteredProd = dados.produtos.filter(produtos =>{
-        return produtos.NOME.includes(filterText)|| produtos.NOME.toLowerCase().includes(filterText) ||produtos.EAN === filterText;
+        return (
+            produtos.NOME.includes(filterText)||
+            produtos.NOME.toLowerCase().includes(filterText)||
+            produtos.EAN === filterText
+            );
     });
 
    let prod = filteredProd.map(produtos => {
@@ -81,7 +86,7 @@ function renderProd(prod){
         li.innerHTML = `
         Nome: ${nome} <br> 
         Descrição: ${desc} <br> 
-        Codigo de Bara: ${codBarra} <br> 
+        Codigo de Barra: ${codBarra} <br> 
         Valor R$: ${preco}
         `
 
