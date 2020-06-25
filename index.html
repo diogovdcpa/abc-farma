@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <title>ABC FARMA</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1 class="title">ABC FARMA</h1>
+
+        <div class="flex-row">
+            <div class="input-field input">
+                <input id="inputSearch" type="text">
+                <label for="inputSearch">Produto</label>
+            </div>
+
+            <button id="btnSearch" class="waves-effect waves-light btn">Buscar</button>
+        </div>
+    </div>
+
+    <div id="divPanel" class="panel">
+        <h6 class="title">Digite o nome do produto ou codigo de barra</h6>
+        <h6 class="title">Nehum produto encontrado</h6>
+        <br><br><br><br>
+    </div>
+
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Tabela de Preço</h5>
+                    <p class="grey-text text-lighten-4">
+                        Tabela de preço desenvolvida de acordo com as informaçoes da lista de preço
+                        do <b>ABC FARMA</b>, para procurar o preço do produto basta colocar o <b>NOME</b> ou
+                        <b>COD.BARRA</b> e clicar no botao <b>BUSCAR</b> 
+                    </p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Ultilidades</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="https://site.abcfarma.org.br/">ABC FARMA</a></li>
+                        <li><a class="grey-text text-lighten-3" href="https://www.institutobulla.com.br/">INSTITUTO BULLA</a></li>
+                        <li><a class="grey-text text-lighten-3" href="https://guiadafarmacia.com.br/">GUIA DA FARMACIA</a></li>
+                        <li><a class="grey-text text-lighten-3" href="https://www.inovafarma.com.br/blog/">INOVA FARMA</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                <b>© 2020 Diogo Vaz de Caldas - Front-End Enginner !</b>
+                <a class="grey-text text-lighten-4 right waves-effect"
+                    href="https://api.whatsapp.com/send?phone=5591993580214&text=Vi%20o%20seu%20site%20do%20ABC%20FARMA%20!">WhatsApp</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- script JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="dados.js"></script>
+    <!-- <script src="base.js"></script> -->
+    <script src="script.js"></script>
+    <!-- fim script JS -->
+
+</body>
+
+</html>
