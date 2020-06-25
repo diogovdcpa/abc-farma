@@ -78,7 +78,12 @@ function renderProd(prod){
         let nome = `${el.nome}`
         let preco = `${el.preco}`
         let desc = `${el.descricao}`
-        li.innerHTML = `${nome} 🚀 ${desc} 🚀 ${codBarra} 🚀 R$:${preco}`
+        li.innerHTML = `
+        Nome: ${nome} <br> 
+        Descrição: ${desc} <br> 
+        Codigo de Bara: ${codBarra} <br> 
+        Valor R$: ${preco}
+        `
 
         ul.appendChild(li);
     });
