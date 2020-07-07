@@ -47,8 +47,8 @@ function handleKeyUp(event){
     }
 }
 
-function filterProd(filterText){
-    const filteredProd = dados.produtos.filter(produtos =>{
+async function filterProd(filterText){
+    const filteredProd = await dados.produtos.filter(produtos =>{
         return (
             produtos.NOME.includes(filterText)||
             produtos.NOME.toLowerCase().includes(filterText)||
@@ -64,7 +64,6 @@ function filterProd(filterText){
             descricao: produtos.DESCRICAO,
         };
     });
-    console.log(prod)
     renderProd(prod)
 }
 
