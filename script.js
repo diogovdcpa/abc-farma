@@ -60,8 +60,12 @@ async function filterProd(filterText){
         return {
             codBarra: produtos.EAN,
             nome: produtos.NOME,
+            composicao: produtos.COMPOSICAO,
+            fabricante: produtos.NOME_FABRICANTE,
+            precoFabrica: produtos.PF_17_ALC,
             preco: produtos.PMC_17,
             descricao: produtos.DESCRICAO,
+            classeTerapeutica: produtos.CLASSE_TERAPEUTICA,
         };
     });
     renderProd(prod)
@@ -78,15 +82,25 @@ function renderProd(prod){
     prod.forEach(el => {
         const li = document.createElement('li');
         li.classList.add('list')
+
         let codBarra = `${el.codBarra}`
         let nome = `${el.nome}`
+        let composicao = `${el.composicao}`
+        let classeTerapeutica = `${el.classeTerapeutica}`
+        let fabricante = `${el.fabricante}`
+        let precoFabrica = `${el.precoFabrica}`
         let preco = `${el.preco}`
         let desc = `${el.descricao}`
+
         li.innerHTML = `
         Nome: ${nome} <br> 
         Descrição: ${desc} <br> 
+        Composição: ${composicao} <br> 
+        Classe Terapeutica: ${classeTerapeutica} <br> 
+        Fabricante: ${fabricante} <br> 
         Codigo de Barra: ${codBarra} <br> 
-        Valor R$: ${preco}
+        Preço de Fabrica R$: ${precoFabrica} <br> 
+        Preço de Venda R$: ${preco}
         `
 
         ul.appendChild(li);
