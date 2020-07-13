@@ -5,22 +5,11 @@ let divPanel = null;
 
 window.addEventListener('load',() => {
 
-    /* getData(); */
     mapElements();
     addEvents();
 
 });
 
-/* function getData() {
-    var getData = dados.produtos.map(produtos => {
-        return {
-            codBarra: produtos.EAN,
-            nome: produtos.NOME,
-            preco: produtos.PMC_17,
-        };
-    });
-    console.log(getData)
-} */
 
 function mapElements() {
     inputSearch = document.querySelector('#inputSearch')
@@ -62,7 +51,7 @@ async function filterProd(filterText){
             nome: produtos.NOME,
             composicao: produtos.COMPOSICAO,
             fabricante: produtos.NOME_FABRICANTE,
-            precoFabrica: produtos.PF_17_ALC,
+            precoFabrica: produtos.PF_17,
             preco: produtos.PMC_17,
             descricao: produtos.DESCRICAO,
             classeTerapeutica: produtos.CLASSE_TERAPEUTICA,
